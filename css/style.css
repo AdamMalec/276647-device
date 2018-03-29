@@ -1,27 +1,28 @@
 @font-face {
   font-family: "Open Sans";
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url("../fonts/opensans.woff2");
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url("../fonts/opensans.woff2"),
+       local('Open Sans Regular'), local('OpenSans-Regular'), url("../fonts/opensans.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: local('Open Sans Light'), local('OpenSans-Light'), url("../fonts/opensanslight.woff2");
+  src: local('Open Sans Light'), local('OpenSans-Light'), url("../fonts/opensanslight.woff2"), url("../fonts/opensanslight.woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/gilroylight.woff2");
+  src: url("../fonts/gilroylight.woff2"), url("../fonts/gilroylight.woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/gilroyextrabold.woff2");
+  src: url("../fonts/gilroyextrabold.woff2"), url("../fonts/gilroyextrabold.woff");
   font-weight: 800;
   font-style: normal;
 }
