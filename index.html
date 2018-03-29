@@ -9,17 +9,13 @@
   <body>
     <div class="container">
       <header class="main-header">     
-        <a class="main-header-logo"><img src="img/main-logo.svg" alt="Логотип компании" width="160" height="35"></a>
+        <a class="main-header-logo index-heder-logo"><img src="img/main-logo.svg" alt="Логотип компании" width="160" height="35"></a>
         <div class="main-functional">
-          <div class="main-search">
-            <form class="main-search-form" action="https://echo.htmlacademy.ru" method="GET">
-              <p class="search">
-                <label class="visually-hidden" for="search">Поиск по сайту</label>
-                <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-                <button class="button-search" type="submit">Найти</button>
-              </p>
-            </form>
-          </div>
+          <form class="main-search" action="https://echo.htmlacademy.ru" method="GET">
+              <label class="visually-hidden" for="search">Поиск по сайту</label>
+              <input class="search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <button class="button-search" type="submit">Найти</button>
+          </form>
           <div class="main-functional-pt2-wrapper">
             <ul class="main-user">
               <li class="main-user-item main-user-login">
@@ -38,25 +34,32 @@
         </div>
         <nav class="main-nav">
           <ul class="main-nav-list">
-            <li class="main-nav-list-catalog"><a href="#">Каталог товаров</a>
-              <ul class="main-nav-list-catalog-list">
-                <div class="catalog-list-column">
-                  <li class="main-nav-list-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="main-nav-list-catalog-item"><a href="#">Моноподы для селфи</a></li>
-                  <li class="main-nav-list-catalog-item"><a href="#">Экшн-камеры</a></li>
-                </div>
-                <div class="catalog-list-column">
-                  <li class="main-nav-list-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-                  <li class="main-nav-list-catalog-item"><a href="#">Умные часы</a></li>
-                </div>
-                <div class="catalog-list-column">
-                  <li class="main-nav-list-catalog-item"><a href="#">Квадрокоптеры</a></li>
-                </div>  
-              </ul>
-            </li>
-            <li class="main-nav-list-delivery"><a href="#">Доставка</a></li>
-            <li class="main-nav-list-warranty"><a href="#">Гарантия</a></li>
-            <li class="main-nav-list-contacts"><a href="#">Контакты</a></li>
+            <li class="main-nav-list-catalog">
+            <a class="main-nav-drop-down" href="#">Каталог товаров</a>
+            <ul class="main-nav-list-catalog-list">
+              <li class="catalog-list-column">
+                <ul>
+                  <li><a class="main-list-nav-catalog-item" href="#">Виртуальная реальность</a></li>
+                  <li><a class="main-list-nav-catalog-item" href="#">Моноподы для селфи</a></li>
+                  <li><a class="main-list-nav-catalog-item" href="#">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li class="catalog-list-column">
+                <ul>
+                  <li><a class="main-list-nav-catalog-item" href="#">Фитнес-браслеты</a></li>
+                 <li> <a class="main-list-nav-catalog-item" href="#">Умные часы</a></li>
+                </ul>
+              </li>
+              <li class="catalog-list-column">
+                <ul>
+                  <li><a class="main-list-nav-catalog-item" href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li> 
+          <li class="main-nav-list-delivery"><a href="#">Доставка</a></li>
+          <li class="main-nav-list-warranty"><a href="#">Гарантия</a></li>
+          <li class="main-nav-list-contacts"><a href="#">Контакты</a></li>
           </ul>
         </nav>
       </header>
@@ -79,7 +82,6 @@
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p> 
               <a class="button slider-button" href="#">Подробнее</a>
               <div class="slider-nav">
-                <form action="https://echo.htmlacademy.ru" method="POST">
                   <ul>
                     <li class="slider-nav-switch">
                       <input class="visually-hidden" type="radio" name="slide-number" value="slide-1" id="slide-1" checked>
@@ -94,7 +96,6 @@
                       <label for="slide-3"></label>
                     </li>
                   </ul>
-                </form>
               </div>
               <table>
                 <tr>
@@ -164,7 +165,7 @@
             </a>
           </li>
           <li>
-            <a class="items-item item-2" href="#">
+            <a class="items-item item-2" href="selfstick.html">
               <h3>Моноподы<br> для селфи</h3>
             </a>
           </li>
@@ -285,10 +286,9 @@
           </div>
         </div>
       </footer>
-    </div>
     <!-- pop-up "Напишите нам" -->
     <section class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
+      <h2 class="visually-hidden">Написать сообщение</h2>
       <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
         <p class="modal-login-item">
           <label for="modal-login-name">Ваше имя:<br></label>
@@ -302,17 +302,19 @@
           <label for="modal-login-email-text">Текст письма:<br></label>
           <textarea name="email-text" id="modal-login-email-text" rows="5" cols="60" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="modal-send" type="submit">Отправить</button>
+        <button class="modal-send button" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
     <!-- pop-up "Карта" -->
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://yandex.by/map-widget/v1/-/CBe3QIVzSA" width="960" height="560"></iframe>
       <p>
         <img src="img/map-big.jpg" width="960" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </p>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
+  <script src="js/script.js"></script>
   </body>
 </html>
