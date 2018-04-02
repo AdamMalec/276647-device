@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -39,7 +40,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li class="main-nav-catalog">
-            <a class="main-nav-drop-down" href="#">Каталог товаров</a>
+            <a class="main-nav-drop-down" href="selfstick.html">Каталог товаров</a>
             <ul class="main-nav-catalog-list">
               <li class="catalog-list-column">
                 <ul>
@@ -47,7 +48,7 @@
                     <a class="main-nav-catalog-item" href="#">Виртуальная реальность</a>
                   </li>
                   <li>
-                    <a class="main-nav-catalog-item" href="#">Моноподы для селфи</a>
+                    <a class="main-nav-catalog-item" href="selfstick.html">Моноподы для селфи</a>
                   </li>
                   <li>
                     <a class="main-nav-catalog-item" href="#">Экшн-камеры</a>
@@ -212,34 +213,24 @@
     <div class="services-wrapper">
       <section class="services container">
         <h2 class="visually-hidden">Наши услуги</h2>
-        <div class="services-section">
-          <input class="visually-hidden" type="radio" name="sections" id="option1" checked>
-          <label class="button " for="option1" tabindex="0">Доставка</label>
-          <article class="services-slide  services-slide-1">
+        <div class="services-buttons">
+          <button class="serviceslinks button active" href="#" onclick="openService(event, 'Delivery')" id="defaultOpen">Доставка</button>
+          <button class="serviceslinks button" href="#" onclick="openService(event, 'Warranty')">Гарантия</button>
+          <button class="serviceslinks button" href="#" onclick="openService(event, 'Сredit')">Кредит</button>
+        </div>
+        <div class="services-info">
+          <div class="services-slide services-slide-1"  id="Delivery">
             <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,поднимая
-              его на ваш этаж.</p>
-          </article>
-        </div>
-
-        <div class="services-section">
-          <input class="visually-hidden" type="radio" name="sections" id="option2">
-          <label class="button" for="option2" tabindex="0">Гарантия</label>
-          <article class="services-slide services-slide-2">
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </div>
+          <div class="services-slide services-slide-2" id="Warranty">
             <h3>Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-              <br> Товар,не дом, конечно же.</p>
-          </article>
-        </div>
-
-        <div class="services-section">
-          <input class="visually-hidden" type="radio" name="sections" id="option3">
-          <label class="button" for="option3" tabindex="0">Кредит</label>
-          <article class="services-slide services-slide-3">
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          </div>
+          <div class="services-slide services-slide-3"  id="Сredit">
             <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
-              Выгодные для нашего банка, разумеется.</p>
-          </article>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </div>
         </div>
       </section>
     </div>
@@ -334,7 +325,6 @@
       </div>
 
       <div class="footer-bottom">
-        <span class="footer-yelow-line"></span>
         <ul class="footer-social">
           <li>
             <a class="style-shape-3 social-button" href="#" target="_blank">

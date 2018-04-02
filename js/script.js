@@ -59,10 +59,6 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-
-
-
-
 var mapLink = document.querySelector(".contacts-map-button");
 
 var mapPopup = document.querySelector(".modal-map");
@@ -86,3 +82,20 @@ window.addEventListener("keydown", function (evt) {
         }
     }
 });
+
+function openService(evt, serviceName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("services-slide");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("serviceslinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(serviceName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
